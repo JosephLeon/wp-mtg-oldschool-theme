@@ -22,23 +22,19 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
-		<header id="" class="">
-      <h1><?php bloginfo('name'); ?></h1>
-      <h2><?php bloginfo('description'); ?></h2>
+		<header id="" class="header-grid">
+			<div class="red grid-item">
+				<h1><?php bloginfo('name'); ?></h1>
+	      <h3><?php bloginfo('description'); ?></h3>
+			</div>
 
-      <nav>
-        <?php wp_nav_menu(array(
-          'theme_location' => 'mainMenu'
-        )) ?>
-        <!-- <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Rules</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul> -->
-      </nav>
+			<div class="blue grid-item">
+				<nav class="group">
+	        <?php wp_nav_menu(array(
+	          'theme_location' => 'mainMenu'
+	        )) ?>
+	      </nav>
+			</div>
 		</header>
 
 	<div id="content" class="site-content">

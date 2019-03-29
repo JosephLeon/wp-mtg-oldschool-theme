@@ -1,0 +1,19 @@
+// layout
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-grid {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto;
+  align-items: end;
+}
