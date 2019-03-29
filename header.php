@@ -25,7 +25,7 @@
 		<header id="" class="header-grid">
 			<div class="red grid-item">
 				<h1><?php bloginfo('name'); ?></h1>
-	      <h3><?php bloginfo('description'); ?></h3>
+	      <h4><?php bloginfo('description'); ?></h4>
 			</div>
 
 			<div class="blue grid-item">

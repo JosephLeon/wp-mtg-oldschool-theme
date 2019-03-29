@@ -1,15 +1,18 @@
     <footer>
       <div class="">
-        Copyright 2019
+        <p>Copyright &#169; <?php echo date("Y"); ?></p>
       </div>
+      <!-- <div class="">
+        <p>
+          Join us on <a href="#"><i class="fab fa-facebook-square"></i></a>
+        </p>
+      </div> -->
       <div class="">
-        <?php wp_nav_menu(array(
-          'theme_location' => 'footerMenu'
-        )) ?>
-      </div>
-      <div class="">
-        <h4>Follow us</h4>
-        <i class="fab fa-facebook-square"></i>
+        <nav class="group">
+          <?php wp_nav_menu(array(
+            'theme_location' => 'footerMenu'
+          )) ?>
+        </nav>
       </div>
     </footer>
   <?php wp_footer(); ?>

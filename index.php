@@ -11,17 +11,20 @@
  get_header();
 ?>
 <div class="">
-  <div class="">
-    <?php
-      while(have_posts()) {
-        the_post(); ?>
-        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-        <p><?php the_content(); ?></p>
-        <hr />
-      <?php }
-    ?>
-  </div>
+  <?php
+    while(have_posts()) {
+      the_post(); ?>
+      <div class="post">
+        <h3>
+          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </h3>
+        <div class="post-content">
+          <?php the_content(); ?>
+        </div>
+      </div>
+    <?php }
+  ?>
 </div>
 
 <?php
-get_footer();
+  get_footer();

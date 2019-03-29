@@ -1,5 +1,13 @@
-ul {
+// menus
+
+ul.menu {
+  float: right;
   li {
     float: left;
+    a {
+      padding: $basefontsize/2;
+      text-decoration: none;
+      &:hover {}
+    }
   }
 }

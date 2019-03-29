@@ -5,15 +5,43 @@
   clear: both;
 }
 
+// uncomment to see divs
+div, header, footer {
+  // border: 1px dotted black;
+}
+
 #page {
-  padding: 20px;
-  max-width: 1200px;
+  // padding: $basefontsize;
+  max-width: $basefontsize*70;
   margin: 0 auto;
+}
+
+#content {
+  padding: $basefontsize;
 }
 
 .header-grid {
   display: grid;
-  grid-column-gap: 20px;
+  grid-column-gap: $basefontsize;
   grid-template-columns: auto auto;
   align-items: end;
+}
+
+footer {
+  display: grid;
+  grid-column-gap: $basefontsize;
+  grid-template-columns: auto auto;
+  align-items: end;
+}
+
+header, .post {
+  margin-bottom: $basefontsize;
+}
+
+header {
+  padding: $basefontsize*3 $basefontsize $basefontsize $basefontsize;
+  background-image: url("/wp-content/themes/mtggroup/images/dark-atog.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -320px;
 }

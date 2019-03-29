@@ -52,15 +52,19 @@ table {
 body {
   font-family: Helvetica, sans-serif;
   font-size: $basefontsize;
-  color: #282828;
+	line-height: $basefontsize*2;
+	color: #fff;
+	background: #303030;
 }
 
 h1 {
   font-size: $fontsize4;
+	line-height: $basefontsize*4;
 }
 
 h2 {
   font-size: $fontsize3;
+	line-height: $basefontsize*3;
 }
 
 h3 {
@@ -83,9 +87,9 @@ li {
 
 }
 
-// .red {
-// 	border: red solid 5px;
-// }
-// .blue {
-// 	border: blue solid 5px;
-// }
+a {
+	color: #e57467;
+	&:hover {
+		color: #fcb6ae;
+	}
+}
