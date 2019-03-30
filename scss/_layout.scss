@@ -16,11 +16,6 @@ div, header, footer {
   margin: 0 auto;
 }
 
-#content {
-  padding: $basefontsize*3 $basefontsize $basefontsize $basefontsize;
-  background: #fff;
-}
-
 .header-grid {
   display: grid;
   grid-column-gap: $basefontsize;
@@ -28,7 +23,22 @@ div, header, footer {
   align-items: end;
 }
 
+#content {
+  padding: 0 $basefontsize*2 $basefontsize*2 $basefontsize*2;
+  background: #fff;
+  position: relative;
+}
+
 footer {
+  position: absolute;
+  bottom: -$basefontsize*4;
+  left: 0;
+  right: 0;
+  padding: $basefontsize;
+  color: white;
+}
+
+#footer-content {
   display: grid;
   grid-column-gap: $basefontsize;
   grid-template-columns: auto auto;
