@@ -8,6 +8,11 @@ body {
 
 header {
 	color: white;
+  h1 {
+    a {
+      color: white;
+    }
+  }
 }
 
 #content {
@@ -40,7 +45,7 @@ p {
 
 ul {
   margin: $basefontsize 0;
-  padding-left: $basefontsize*2;
+  padding-left: $basefontsize*1.5;
 }
 
 li {
@@ -49,7 +54,14 @@ li {
 
 a {
 	color: $link-primary;
+  text-decoration: none;
 	&:hover {
 		color: $link-highlight;
 	}
+  #content & {
+    color: $link-main-text;
+  }
+  #content &:hover {
+    text-decoration: underline;
+  }
 }

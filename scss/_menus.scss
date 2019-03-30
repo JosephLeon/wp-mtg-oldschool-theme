@@ -9,7 +9,11 @@ ul.menu {
     list-style-type: none;
     a {
       padding: $basefontsize/2;
-      text-decoration: none;
+    }
+    &.current_page_item {
+      a {
+        color: $link-highlight;
+      }
     }
   }
 }

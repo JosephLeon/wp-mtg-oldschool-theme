@@ -38,9 +38,9 @@ footer {
   color: white;
 }
 
-#footer-content {
+#footer-content, .container-2 {
   display: grid;
-  grid-column-gap: $basefontsize;
+  grid-column-gap: $basefontsize*2;
   grid-template-columns: auto auto;
   align-items: end;
 }

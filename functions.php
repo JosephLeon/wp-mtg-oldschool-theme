@@ -9,6 +9,7 @@ function mtg_files() {
 
 add_action('wp_enqueue_scripts', 'mtg_files');
 
+// theme features
 function mtg_features() {
   add_theme_support('title-tag');
   register_nav_menu('mainMenu', 'Main Menu');
@@ -16,3 +17,14 @@ function mtg_features() {
 }
 
 add_action('after_setup_theme', 'mtg_features');
+
+// // theme customizations
+// function mytheme_customize_register( $wp_customize ) {
+//   //All our sections, settings, and controls will be added here
+//   $wp_customize->add_setting( 'header_textcolor' , array(
+//       'default'   => '#000000',
+//       'transport' => 'refresh',
+//     )
+//   );
+// }
+// add_action( 'customize_register', 'mytheme_customize_register' );
