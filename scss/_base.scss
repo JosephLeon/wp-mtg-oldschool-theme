@@ -53,8 +53,12 @@ body {
   font-family: Helvetica, sans-serif;
   font-size: $basefontsize;
 	line-height: $basefontsize*2;
-	color: #fff;
+	color: #303030;
 	background: #303030;
+}
+
+header {
+	color: #fff;
 }
 
 h1 {
