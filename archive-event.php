@@ -4,8 +4,9 @@
   <main id="main" class="site-main">
     <h1>Latest Posts</h1>
     <?php
-      while(have_posts()) {
-        the_post(); ?>
+      $args = array( 'post_type' => 'event', 'posts_per_page' => 10 );
+      $loop = new WP_Query( $args );
+      while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="post<?php if (($wp_query->current_post +1) == ($wp_query->post_count)) { print ' last'; } ?>">
           <h3>
             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -20,7 +21,8 @@
             <p><a href="<?php the_permalink(); ?>">Continue reading &#187;</a></p>
           </div>
         </div>
-      <?php }
+    <?php
+      endwhile;
     ?>
     <?php if (paginate_links()) : ?>
       <p>

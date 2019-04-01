@@ -16,8 +16,8 @@ header {
 }
 
 #content {
-  h1, h2, h3, h4 {
-    padding-top: $basefontsize*2;
+  h2, h3, h4 {
+    margin-top: $basefontsize*2;
   }
 }
 
@@ -40,7 +40,7 @@ h4 {
 }
 
 p {
-
+  margin-bottom: $basefontsize;
 }
 
 ul {
@@ -58,10 +58,18 @@ a {
 	&:hover {
 		color: $link-highlight;
 	}
-  #content & {
+  article & {
     color: $link-main-text;
   }
-  #content &:hover {
+  article &:hover {
     text-decoration: underline;
   }
+}
+
+em {
+  font-style: italic;
+}
+
+.small {
+  font-size: $basefontsize*0.75;
 }

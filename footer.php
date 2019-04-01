@@ -1,7 +1,7 @@
     <footer>
       <div id="footer-content">
         <div class="">
-          <p>Copyright &#169; <?php echo date("Y"); ?></p>
+          <p>&#169; Copyright TampaBaytogs <?php echo date("Y"); ?></p>
         </div>
         <!-- <div class="">
           <p>

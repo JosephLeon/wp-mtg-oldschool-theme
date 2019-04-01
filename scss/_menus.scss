@@ -17,3 +17,27 @@ ul.menu {
     }
   }
 }
+
+.mobile-menu-items {
+  ul.menu {
+    float: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: none;
+      a {
+        width: 100%;
+        display: block;
+        &:hover {
+          background: $highlight-background;
+        }
+      }
+      &.current_page_item {
+        a {
+          color: $link-highlight;
+          background: $highlight-background;
+        }
+      }
+    }
+  }
+}

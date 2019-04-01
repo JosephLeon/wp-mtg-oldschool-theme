@@ -23,18 +23,26 @@
 <div id="page" class="site">
 
 		<header id="" class="header-grid">
-			<div class="red grid-item">
+			<div class="grid-item">
 				<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a></h1>
 	      <h4><?php bloginfo('description'); ?></h4>
 			</div>
 
-			<div class="blue grid-item">
-				<nav class="group">
+			<div class="grid-item">
+				<div id="mobile-bars">
+					<i class="fas fa-bars"></i>
+				</div>
+				<nav class="group menu-items">
 	        <?php wp_nav_menu(array(
 	          'theme_location' => 'mainMenu'
 	        )) ?>
 	      </nav>
 			</div>
 		</header>
+		<nav class="group mobile-menu-items">
+			<?php wp_nav_menu(array(
+				'theme_location' => 'mainMenu'
+			)) ?>
+		</nav>
 
 	<div id="content" class="site-content">
