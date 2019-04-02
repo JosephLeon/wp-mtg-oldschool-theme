@@ -66,6 +66,11 @@ a {
   }
 }
 
+blockquote {
+  padding-left: 17px;
+  border-left: 5px solid $link-primary;
+}
+
 em {
   font-style: italic;
 }

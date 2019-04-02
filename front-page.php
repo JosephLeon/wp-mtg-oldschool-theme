@@ -3,14 +3,20 @@
 <section id="primary" class="content-area">
   <main id="main" class="site-main">
     <div class="">
-      <h1>Welcome to the Tampa Baytogs</h1>
-      <p>Introductory paragraph; will end up being a customization on the theme; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <?php
+        // load the title and intro paragraph
+        while(have_posts()) {
+          the_post(); ?>
+          <h1><?php the_title(); ?></h1>
+          <p><?php the_content(); ?></p>
+        <?php }
+      ?>
     </div>
     <div class="container-2-a">
       <div class="grid-item">
         <h2>Latest Posts</h2>
         <?php
-          $args = array( 'post_type' => 'post', 'posts_per_page' => 5 );
+          $args = array( 'post_type' => 'post', 'posts_per_page' => 3 );
           $loop = new WP_Query( $args );
           while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <h3>
@@ -26,7 +32,7 @@
       <div class="grid-item">
         <h2>Upcoming Events</h2>
         <?php
-          $args = array( 'post_type' => 'event', 'posts_per_page' => 5 );
+          $args = array( 'post_type' => 'event', 'posts_per_page' => 3 );
           $loop = new WP_Query( $args );
           while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <h3>
